@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  ferremas:
+    build: .
+    container_name: ferremas-api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./data/ferremas.db
+      - SECRET_KEY=ferremas-secret-key-2024-cambiar-en-produccion
+    volumes:
+      - ferremas_data:/app/data
+
+volumes:
+  ferremas_data:
