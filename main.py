@@ -13,6 +13,7 @@ from backend.routers.extras import router_divisas, router_contacto
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
+    redirect_slashes=False,
     title="FERREMAS API",
     description="""
 ## API de la plataforma de comercio electrónico FERREMAS
