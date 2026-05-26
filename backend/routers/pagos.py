@@ -147,7 +147,7 @@ def _html_resultado(exito: bool, titulo: str, mensaje: str, redirect: str) -> st
     <small>Redirigiendo en 4 segundos...</small>
     <div class="progress"><div class="progress-bar"></div></div>
   </div>
-  <script>setTimeout(() => window.location.href = "http://localhost:8000{redirect}", 4000);</script>
+  <script>setTimeout(() => window.location.href = "{redirect}", 4000);</script>
 </body>
 </html>"""
 
